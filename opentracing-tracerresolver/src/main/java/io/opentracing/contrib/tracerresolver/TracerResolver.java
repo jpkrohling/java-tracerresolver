@@ -90,7 +90,10 @@ public abstract class TracerResolver {
 
     /**
      * Reloads the lazily found {@linkplain TracerResolver resolvers} and the fallback resolver.
+     *
+     * @deprecated This method is now no-op. It's safe to just remove this method call, as there's no caching anymore.
      */
+    @Deprecated
     public static void reload() {
         LOGGER.log(Level.FINER, "No-op for this implementation.");
     }
